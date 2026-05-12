@@ -1,0 +1,52 @@
+:root {
+  /* Основные цвета */
+  --supheader-bg: #f0eedd;
+  --supheader-text: #670a18;
+  --main-text: #35312e;
+  --profile-icon-bg: #c87b5e;
+  --light-color: #f5f1e9;
+  --main-btn-bg: #d37657;
+  --second-light-color: #fcfaf6;
+  --grey-text: #4f463f;
+  --design-block-bg: #fbf6ea;
+  --design-block-text: #6e6259;
+  --item-card-text: #6e635a;
+  --footer-bg: #6c674d;
+  --footer-input-text: #00000080;
+  --footer-nav-text: #f5f1e999;
+  --subfooter-bg: #807c62;
+  --subfooter-text: #fcfaf680;
+
+  --main-font: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  color: var(--main-text);
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased; /* чтобы шрифты были четкими как в Figma */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+.supheader {
+  background-color: var(--supheader-bg);
+  color: var(--supheader-text);
+  text-align: center;
+  padding: 9px 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}

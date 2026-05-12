@@ -1,0 +1,26 @@
+:root {
+  /* Основные цвета */
+  --bg-creme: #F5F2ED;      /* Фон всей страницы */
+  --text-dark: #2D2D2D;     /* Основной текст */
+  --accent-coral: #E36B51;  /* Оранжевая кнопка "Shop" */
+  --footer-olive: #6B6852;  /* Цвет футера из нижней части макета */
+
+  --supheader-bg: #F0EEDD;
+  --supheader-text: #670A18;
+  /* Шрифты (проверь названия в Figma, но обычно в таких макетах они такие) */
+  --font-main: 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Georgia', serif; /* Для заголовков типа "Your new skillet" */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-creme);
+  color: var(--text-dark);
+  font-family: var(--font-main);
+  margin: 0;
+}
