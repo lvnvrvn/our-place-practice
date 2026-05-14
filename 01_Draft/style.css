@@ -39,7 +39,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -294,45 +295,97 @@ ul {
   height: auto;
 }
 
-.diagram__tip-text {
-  font-size: 12px;
-  line-height: 1.29;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--design-block-text);
-}
-
 .design__diagram__tip {
   position: absolute;
 }
 
-.diagram__tip-mark {
+.diagram__tip__lid {
+  top: 83px;
+  left: -144px;
+  min-width: 135px;
+}
+
+.diagram__tip__lid .diagram__tip__mark {
+  top: 16px;
+  right: -52px;
+  z-index: -1;
+}
+
+.diagram__tip__spatula {
+  min-width: 158px;
+  top: 36px;
+  right: 26px;
+}
+
+.diagram__tip__spatula .diagram__tip__mark {
+  left: 45%;
+  /* bottom: -56px; */
+  top: calc(100% + 70px);
+}
+
+.diagram__tip__spouts {
+  min-width: 107px;
+  left: -64px;
+  /* bottom: 165px; */
+  top: 357px;
+}
+
+.diagram__tip__spouts .diagram__tip__mark {
+  right: -59px;
+  top: calc(100% + 39px);
+}
+
+.diagram__tip__colander {
+  min-width: 171px;
+  top: 284px;
+  right: 21px;
+}
+
+.diagram__tip__colander .diagram__tip__mark {
+  left: -39px;
+  top: 7px;
+  z-index: -1;
+}
+
+.diagram__tip__nonstick {
+  min-width: 172px;
+  left: -144px;
+  top: 472px;
+}
+
+.diagram__tip__nonstick .diagram__tip__mark {
+  top: 47px;
+  right: -91px;
+}
+
+.diagram__tip__handle {
+  min-width: 160px;
+  top: 443px;
+  right: -15px;
+  /* background: red; */
+  /* height: 15.48px; */
+}
+
+.diagram__tip__handle .diagram__tip__mark {
+  top: -32px;
+  left: 34px;
+  z-index: -1;
+}
+
+.diagram__tip__mark {
   position: absolute;
   width: 12px;
   height: 12px;
   background-color: var(--design-block-mark);
 }
 
-.diagram__tip-text:nth-last-of-type(1) {
-  max-width: 135px;
-}
+.diagram__tip-text {
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.29;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--design-block-text);
 
-.diagram__tip-text:nth-last-of-type(2) {
-  max-width: 158px;
-}
-
-.diagram__tip-text:nth-last-of-type(3) {
-  max-width: 107px;
-}
-
-.diagram__tip-text:nth-last-of-type(4) {
-  max-width: 171px;
-}
-
-.diagram__tip-text:nth-last-of-type(5) {
-  max-width: 172px;
-}
-
-.diagram__tip-text:nth-last-of-type(6) {
-  max-width: 160px;
+  width: 100%;
 }
