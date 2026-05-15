@@ -613,3 +613,116 @@ ul {
   text-transform: uppercase;
   color: var(--grey-text);
 }
+
+.footer {
+  padding: 80px 123px 123px 48px;
+  background-color: var(--footer-bg);
+  display: flex;
+  column-gap: 311px;
+}
+
+/* .footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+} */
+
+.footer__contact__title {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 2.51;
+  letter-spacing: 0.7px;
+  color: var(--light-color);
+  margin-bottom: 11px;
+}
+
+.footer__contact__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--second-light-color);
+  margin-bottom: 62px;
+}
+
+.footer__contact__form {
+  display: grid;
+  grid-template-columns: 347px 101px;
+  width: 448px;
+  height: 60px;
+}
+
+.footer__contact__form__input {
+  background-color: var(--second-light-color);
+  height: 100%;
+}
+
+.footer__contact__form__input.input__text {
+  width: 347px;
+  padding: 5px 20px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 4.44;
+  letter-spacing: 0.7px;
+  color: #00000080;
+}
+
+.footer__contact__form__input.input__text::placeholder {
+  color: #00000080;
+  ont-weight: 700;
+  font-size: 13px;
+  line-height: 4.44;
+  letter-spacing: 0.7px;
+}
+
+.footer__contact__form__input.input__submit {
+  padding: 23px 20px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+
+.footer__nav {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 149px;
+}
+
+.footer__nav__title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  margin-bottom: 9px;
+}
+
+.nav__item {
+  font-size: 16px;
+  line-height: 1.91;
+  color: var(--footer-nav-text);
+  margin-bottom: 9px;
+}
+
+.footer__location__title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  margin-bottom: 9px;
+}
+
+.footer__location__content {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
