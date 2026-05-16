@@ -704,7 +704,7 @@ ul {
   margin-bottom: 9px;
 }
 
-.nav__item {
+.footer__nav__item {
   font-size: 16px;
   line-height: 1.91;
   color: var(--footer-nav-text);
