@@ -1,5 +1,4 @@
 :root {
-  /* Основные цвета */
   --supheader-bg: #f0eedd;
   --supheader-text: #670a18;
   --main-text: #35312e;
@@ -103,6 +102,55 @@ ul {
   align-items: center;
   background-color: var(--cart-el-bg);
   color: var(--light-color);
+}
+
+.mobile__menu {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+}
+
+.mobile__menu__icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.mobile__menu__icon:nth-of-type(2) {
+  transform: scale(0.9);
+}
+
+.mobile__menu__icon.active {
+  opacity: 1;
+}
+
+.mobile__menu__list {
+  opacity: 0;
+  transform: translateY(-30px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 160px;
+  background-color: #fff;
+  padding: 10px;
+  border: 0.5px solid var(--main-text);
+  border-radius: 12px;
+  transition: all 0.2s linear;
+}
+
+.mobile__menu__list.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero {
@@ -320,14 +368,12 @@ ul {
 
 .diagram__tip__spatula .diagram__tip__mark {
   left: 45%;
-  /* bottom: -56px; */
   top: calc(100% + 70px);
 }
 
 .diagram__tip__spouts {
   min-width: 107px;
   left: -64px;
-  /* bottom: 165px; */
   top: 357px;
 }
 
@@ -363,8 +409,6 @@ ul {
   min-width: 160px;
   top: 443px;
   right: -15px;
-  /* background: red; */
-  /* height: 15.48px; */
 }
 
 .diagram__tip__handle .diagram__tip__mark {
@@ -380,7 +424,7 @@ ul {
   background-color: var(--design-block-mark);
 }
 
-.diagram__tip-text {
+.diagram__tip__text {
   position: absolute;
   font-size: 12px;
   line-height: 1.29;
@@ -389,6 +433,21 @@ ul {
   color: var(--design-block-text);
 
   width: 100%;
+}
+
+.design__mobile__tips {
+  margin-top: 50px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.design__mobile__tip {
+  line-height: 1.29;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--design-block-text);
 }
 
 .catalog {
@@ -566,12 +625,10 @@ ul {
 .follow {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* min-height: 480px; */
 }
 
 .follow__part__img {
   width: 100%;
-  /* height: 100%; */
   display: block;
 }
 
@@ -618,14 +675,9 @@ ul {
   padding: 80px 123px 123px 48px;
   background-color: var(--footer-bg);
   display: flex;
+  justify-content: center;
   column-gap: 311px;
 }
-
-/* .footer__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-} */
 
 .footer__contact__title {
   font-weight: 700;
@@ -667,7 +719,7 @@ ul {
 
 .footer__contact__form__input.input__text::placeholder {
   color: #00000080;
-  ont-weight: 700;
+  font-weight: 700;
   font-size: 13px;
   line-height: 4.44;
   letter-spacing: 0.7px;
@@ -763,4 +815,199 @@ ul {
 .subfooter__btn img {
   display: block;
   height: 100%;
+}
+
+@media (max-width: 1400px) {
+  .catalog__content {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .hero {
+    padding: 12% 24%;
+  }
+  .main__footer {
+    padding: 80px 50px;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main__footer {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .footer__nav {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 860px) {
+  .press__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .welcome__container {
+    gap: 50px;
+    flex-direction: column;
+  }
+  .follow {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .follow__suptitle {
+    margin-bottom: 10px;
+  }
+  .follow__title {
+    font-size: 18px;
+    margin: 0 auto 20px;
+  }
+  .follow__btn {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 760px) {
+  .design__diagram {
+    transform: translateX(13%) scale(0.8);
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 25px;
+  }
+  .header nav {
+    display: none;
+  }
+  .mobile__menu {
+    display: block;
+    pointer-events: all;
+  }
+  .hero {
+    padding: 12%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+  .design__diagram {
+    transform: translateX(13%) scale(0.7);
+  }
+  .follow {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .follow__part__center {
+    gap: 100px;
+  }
+  .follow__title {
+    font-size: 24px;
+  }
+  .follow__btn {
+    padding: 19px 41px 23px;
+  }
+  .subfooter__list__item__copy {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .design {
+    padding: 70px 15px;
+  }
+  .design__diagram {
+    transform: translateX(0) scale(1);
+    display: flex;
+    flex-direction: column;
+  }
+  .diagram__tip__text {
+    display: none;
+  }
+  .design__diagram__tip .diagram__tip__mark {
+    top: 0;
+  }
+  .diagram__tip__spatula .diagram__tip__mark {
+    top: calc(100% + 62px);
+  }
+  .diagram__tip__colander .diagram__tip__mark {
+    left: -18px;
+    top: -20px;
+  }
+  .diagram__tip__handle .diagram__tip__mark {
+    top: -69px;
+    left: 48px;
+  }
+  .design__mobile__tip {
+    font-size: 18px;
+    border: 1px solid var(--design-block-text);
+    border-radius: 8px;
+    padding: 5px;
+  }
+  .footer__contact__form {
+    grid-template-columns: 4fr 1fr;
+    width: 80%;
+  }
+  .footer__contact__form__input.input__text {
+    width: auto;
+  }
+  .footer__nav {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .subfooter,
+  .subfooter__list,
+  .subfooter__nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .supheader {
+    padding: 10px;
+  }
+  .design__colors ul {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+  .diagram__tip__mark {
+    display: none;
+  }
+  .design__mobile__tip {
+    font-size: 14px;
+  }
+  .catalog {
+    padding: 74px 10px 105px;
+  }
+  .catalog__card__colors {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .follow__part__center {
+    gap: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer__contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__contact__form {
+    height: auto;
+  }
+  .input__text {
+    height: 60px;
+  }
+}
+
+@media (max-height: 400px) {
+  .hero__title {
+    font-size: 32px;
+  }
 }
